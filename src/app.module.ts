@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { typeOrmConfig } from './configs/typeOrmConfig';
+import { LanguageModule } from './language/language.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { typeOrmConfig } from './configs/typeOrmConfig';
     MulterModule.register({
       dest: './upload',
     }),
+    LanguageModule,
   ],
   controllers: [AppController],
   providers: [AppService],
